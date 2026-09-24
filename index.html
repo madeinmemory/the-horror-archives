@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broken But Beautiful Archives</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="records.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav class="site-nav">
+        <button id="credits-button">CREDITS ▾</button>
+        <div id="credits-menu">
+           <p>CREATED BY // ALEX FEUILLEBOIS</p>
+           <p>WRITING, STORY AND LORE BY // ALEX FEUILLEBOIS</p>
+           <p>PROGRAMMING AND WEBSITE DEVELOPMENT BY // ALEX FEUILLEBOIS</p>
+        </div>
+    </nav>
+    <div class="header">
+    <h1>Broken But Beautiful</h1>
+    <p class="archive-title">The Complete Archives</p>
+    <p class="intro">
+        Records of the Regions, places and events of the Joined World.</p>
+         
+        <div class="archive-status">
+            <p class="public-archive">PUBLIC ARCHIVE // TREED CENTRAL RECORDS</p>
+            <p id="current-directory">CURRENT DIRECTORY // NONE</p>
+        </div>
+
+        <div class="art-panel art-panel-left">
+
+             <img id="left-art-image" class="art-panel-image">
+
+             <div class="art-panel-info">
+                <p>ARTWORK // <span id="left-art-name"></span></p>
+                <p>ARTIST // <span id="left-art-artist"></span></p>
+                <p>CREATED // <span id="left-art-date"></span></p>
+             </div>
+
+            </div>
+
+            <div class="art-panel art-panel-right">
+
+             <img id="right-art-image" class="art-panel-image">
+
+             <div class="art-panel-info">
+                <p>ARTWORK // <span id="right-art-name"></span></p>
+                <p>ARTIST // <span id="right-art-artist"></span></p>
+                <p>CREATED // <span id="right-art-date"></span></p>
+             </div>
+
+            </div>
+
+
+        <section class="archive">
+           <details>
+            <summary>REGIONS</summary>
+            <p>Cascadia</p>
+            <p>Pelara</p>
+            <p>Meridian</p>
+            <p>Cordara</p>
+            <p>Valmere</p>
+            <p>Antilla</p>
+            <p>Occidia</p>
+           </details>
+
+
+           <details>
+            <summary>HISTORY</summary>
+            <p>The Twenty-Year War</p>
+            <p>The Joining</p>
+            <p>The Reconstruction</p>
+            <p>Formation of TREED</p>
+           </details>
+
+           <details>
+            <summary>TREED</summary>
+            <p>Government</p>
+            <p>Capitals</p>
+            <p>Sentinels</p>
+            <p>Vanguard Division</p>
+           </details>
+
+           <details>
+            <summary>FACTIONS</summary>
+            <p>The Butter Club</p>
+            <p>Saints Rebellion</p>
+           </details>
+
+           <details>
+            <summary>SUPERNATURAL RECORDS</summary>
+            <p>Demons'</p>
+            <p>Damned Demons'</p>
+            <p>Primogenitor's</p>
+            <p>Newmen's</p>
+            <p>Maledict's</p>
+            <p>Saint's</p>
+            <p>Angel's</p>
+            <p>Archangel's</p>
+            
+           </details>
+
+
+
+        </section>
+
+        <section class="record-display">
+           <p class="record-label">ARCHIVE RECORD</p>
+
+           <p id="record-type">RECORD TYPE // NONE</p>
+
+           <h2 id="record-title">NO RECORD SELECTED</h2>
+           <div class="record-metadata">
+            <p>STATUS // <span id="record-status">UNAVAILABLE</span></p>
+            <p>ACCESS // <span id="record-access">PUBLIC</span></p>
+           </div>
+
+           <p id="record-description">Select a record from the archive directory to view available information.</p>
+
+             <div id="record-extra">
+                
+             </div>
+
+           <button id="record-expand" disabled>SEE MORE ↓</button>
+
+        </section>
+    </div>
+
+    <footer class="site-footer">
+      <p>THIS WEBSITE IS STILL BEING UPDATED AS LORE IS CREATED</p>
+      <p>ARCHIVE VERSION // <span id="site-version">1.0.0</span></p>
+      <p>LAST UPDATED // <span id=last-updated>09.23.2026</span></p>
+    </footer>
+</body>
+
+</html>

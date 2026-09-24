@@ -1,0 +1,352 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    font-family: Georgia, "Times New Roman", serif;
+    background: radial-gradient(circle at top, #3f3e3e 0%, #080808 45%, #000000 100%)
+
+}
+
+/* Header's */
+
+.header {
+    min-height: 25vh;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #eeeeee;
+    
+}
+
+.header h1 {
+    color: #e8e4dc;
+    font-size: 4rem;
+    letter-spacing: 4px;
+}
+
+.header p {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin: 0;
+    margin-top: 1rem;
+    color: #a8a49c;
+
+}
+
+.header .intro {
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    color: #77736c;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #222222;
+}
+
+/* Archive's */
+
+
+.archive {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1rem;
+    transform: translateX(-90px);
+}
+
+.header .archive-title {
+    transform: translateY(-20px);
+}
+
+.archive summary {
+    cursor: pointer;
+    padding: 1rem;
+    border-bottom: 1px solid #333333;
+    letter-spacing: 2px;
+    transition: background-color 0.2s ease,
+     color 0.2s ease,
+      border-left-color 0.2s ease;
+
+    border-left: 3px solid #333333;
+    white-space: nowrap;
+}
+
+.archive summary:hover {
+    background-color: #0d0d0d;
+    color: #e8e4dc;
+    border-left-color: #e8e4dc;
+}
+
+.archive p {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #333333;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-left: 2px solid #333333;
+}
+
+.archive p:hover {
+    background-color: #151515;
+    transition: background-color 0.1s ease,
+     color 0.2s ease, transform 0.2s ease,
+      border-left-color 0.2s ease;
+      
+    color: #e8e4dc;
+    transform: translateX(5px);
+    border-left-color: #e8e4dc;
+}
+
+.archive details[open] summary {
+    background-color: #0d0d0d;
+    color: #e8e4dc;
+    border-left-color: #e8e4dc;
+}
+
+.archive-status {
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #77736c;
+    
+    border-bottom: 1px solid #222222;
+    padding: 1rem 0;
+
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.public-archive {
+    color: #a8a49c;
+    -webkit-text-stroke: 0.5px #f0ebeb;
+}
+
+/* Record's */
+
+.record-display {
+    width: 80%;
+    max-width: 1100px;
+    min-height: 45vh;
+    margin: 3rem auto;
+    padding: 2rem;
+    border: 1px solid #222222;
+    background-color: #050505;
+    box-sizing:border-box;
+    position: relative;
+}
+
+.record-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #77736c;
+    margin: 0 0 1rem 0;
+}
+
+#record-title {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: #e8e4dc;
+    margin: 0 0 1rem 0;
+    border-bottom: 1px solid #222222;
+    padding-top: 1rem;
+}
+
+#record-description {
+    color: #a8a49c;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 650px;
+    padding-top: 1rem;
+}
+
+.record-display.record-change {
+    animation: recordFade 0.3s ease;
+}
+
+ @keyframes recordFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+     to {
+        opacity: 1;
+        transform: translateY(0);
+     }
+ }
+
+ .record-metadata {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    color: 77736c;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+ }
+
+ #record-expand {
+    background-color: #000000;
+    border: 1px solid grey;
+    color: #e8e4dc;
+    padding: 8px 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+ }
+
+ #record-extra {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+  border-top: 1px solid #222222;
+  margin-top: 2rem;
+  padding-top: 2rem;
+ }
+
+ #record-extra.open {
+    max-height: 5000px;
+    min-height: 900px;
+    opacity: 1;
+ }
+
+ #record-extra h3{
+    color: #e8e4dc;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+ }
+
+ /* Credits */
+
+ #credits-menu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 25px;
+    text-align: center;
+    width: 260px;
+    padding: 15px;
+    background-color: #080808;
+    border: 1px solid #333333;
+    color: white;
+ }
+
+ #credits-menu.open {
+    display: block;
+
+ }
+
+ #credits-menu p {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+ }
+
+/* NAV and Credits Button */
+
+.site-nav {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.site-nav a, #credits-button {
+    background-color: #000000;
+    border: 1px solid #333333;
+    color: #e8e4dc;
+    padding: 8px 14px;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.site-nav a:hover, #credits-button:hover {
+    border-color: #777777;
+    background-color: #111111;
+}
+
+ /* Footer */
+
+ .site-footer {
+    position: fixed;
+    bottom: 12px;
+    right: 18px;
+    text-align: right;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #666666;
+ }
+
+ .site-footer p {
+    margin: 3px 0;
+ }
+
+
+ /* Artwork Panels */
+
+ .art-panel {
+    position: fixed;
+    top: 495px;
+    width: 260px;
+    background-color: #080808;
+    border: 1px solid #333333;
+    z-index: 15;
+    opacity: 0;
+    transform: translateY(-150%);
+
+ }
+
+ .art-panel.drop {
+    animation: artDrop 0.8s ease-out forwards;
+}
+
+ @keyframes artDrop {
+
+    0% {
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+ }
+
+ .art-panel-left {
+    left: 70px;
+ }
+
+ .art-panel-right {
+    right: 70px;
+ }
+
+ .art-panel-info {
+    padding: 12px;
+    border-top: 1px solid #333333;
+ }
+
+ .art-panel-info p {
+    margin: 5px 0;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #bdb8ae;
+ }
+
+ .art-panel-image {
+    display: block;
+    width: 100%;
+    height: auto;
+ }
