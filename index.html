@@ -1,139 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Broken But Beautiful Archives</title>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Horror Archives</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="records.js" defer></script>
     <script src="script.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="site-nav">
-        <button id="credits-button">CREDITS ▾</button>
-        <div id="credits-menu">
-           <p>CREATED BY // ALEX FEUILLEBOIS</p>
-           <p>WRITING, STORY AND LORE BY // ALEX FEUILLEBOIS</p>
-           <p>PROGRAMMING AND WEBSITE DEVELOPMENT BY // ALEX FEUILLEBOIS</p>
-        </div>
+      <button id="credits-button">CREDITS ▾</button>
+      <div id="credits-menu">
+        <p>CREATED BY // ALEX FEUILLEBOIS</p>
+        <p>ARCHIVE CURATION BY // ALEX FEUILLEBOIS</p>
+        <p>PROGRAMMING AND WEBSITE DEVELOPMENT BY // ALEX FEUILLEBOIS</p>
+      </div>
     </nav>
+
     <div class="header">
-    <h1>Broken But Beautiful</h1>
-    <p class="archive-title">The Complete Archives</p>
-    <p class="intro">
-        Records of the Regions, places and events of the Joined World.</p>
-         
-        <div class="archive-status">
-            <p class="public-archive">PUBLIC ARCHIVE // TREED CENTRAL RECORDS</p>
-            <p id="current-directory">CURRENT DIRECTORY // NONE</p>
+      <h1>The Horror Archives</h1>
+      <p class="archive-title">The Complete Archives</p>
+      <p class="intro">
+        Records of liminal spaces, anomalous fiction, internet horror, folklore
+        and horror games.
+      </p>
+
+      <div class="archive-status">
+        <p class="public-archive">PUBLIC ARCHIVE // HORROR RECORDS</p>
+        <p id="current-directory">CURRENT DIRECTORY // NONE</p>
+      </div>
+
+      <div class="art-panel art-panel-left">
+        <img id="left-art-image" class="art-panel-image" />
+
+        <div class="art-panel-info">
+          <p>ARTWORK // <span id="left-art-name"></span></p>
+          <p>SOURCE // <span id="left-art-artist"></span></p>
+          <p>DATE // <span id="left-art-date"></span></p>
+        </div>
+      </div>
+
+      <div class="art-panel art-panel-right">
+        <img id="right-art-image" class="art-panel-image" />
+
+        <div class="art-panel-info">
+          <p>ARTWORK // <span id="right-art-name"></span></p>
+          <p>SOURCE // <span id="right-art-artist"></span></p>
+          <p>DATE // <span id="right-art-date"></span></p>
+        </div>
+      </div>
+
+      <section class="archive">
+        <details>
+          <summary>BACKROOMS</summary>
+          <p>The Backrooms</p>
+          <p>Level 0</p>
+          <p>Level 1</p>
+          <p>Level 2</p>
+          <p>The Poolrooms</p>
+          <p>The End</p>
+          <p>Level !</p>
+        </details>
+
+        <details>
+          <summary>SCP FOUNDATION</summary>
+          <p>SCP-173</p>
+          <p>SCP-096</p>
+          <p>SCP-106</p>
+          <p>SCP-087</p>
+          <p>SCP-049</p>
+          <p>SCP-3008</p>
+          <p>SCP-682</p>
+        </details>
+
+        <details>
+          <summary>CREEPYPASTA</summary>
+          <p>BEN Drowned</p>
+          <p>The Rake</p>
+          <p>Smile Dog</p>
+          <p>Candle Cove</p>
+          <p>Slender Man</p>
+          <p>Jeff the Killer</p>
+          <p>The Russian Sleep Experiment</p>
+        </details>
+
+        <details>
+          <summary>ENTITIES & LEGENDS</summary>
+          <p>Wendigo</p>
+          <p>Loch Ness Monster</p>
+          <p>Mothman</p>
+          <p>Jersey Devil</p>
+          <p>Chupacabra</p>
+          <p>Black-Eyed Children</p>
+          <p>Fresno Nightcrawlers</p>
+        </details>
+
+        <details>
+          <summary>HORROR GAMES</summary>
+          <p>Iron Lung</p>
+          <p>P.T.</p>
+          <p>Outlast</p>
+          <p>SOMA</p>
+          <p>Amnesia: The Bunker</p>
+          <p>Silent Hill 2</p>
+          <p>Little Nightmares</p>
+        </details>
+      </section>
+
+      <section class="record-display">
+        <p class="record-label">ARCHIVE RECORD</p>
+
+        <p id="record-type">RECORD TYPE // NONE</p>
+
+        <h2 id="record-title">NO RECORD SELECTED</h2>
+        <div class="record-metadata">
+          <p>STATUS // <span id="record-status">UNAVAILABLE</span></p>
+          <p>ACCESS // <span id="record-access">PUBLIC</span></p>
         </div>
 
-        <div class="art-panel art-panel-left">
+        <p id="record-description">
+          Select a record from the archive directory to view available
+          information.
+        </p>
 
-             <img id="left-art-image" class="art-panel-image">
+        <div id="record-extra"></div>
 
-             <div class="art-panel-info">
-                <p>ARTWORK // <span id="left-art-name"></span></p>
-                <p>ARTIST // <span id="left-art-artist"></span></p>
-                <p>CREATED // <span id="left-art-date"></span></p>
-             </div>
-
-            </div>
-
-            <div class="art-panel art-panel-right">
-
-             <img id="right-art-image" class="art-panel-image">
-
-             <div class="art-panel-info">
-                <p>ARTWORK // <span id="right-art-name"></span></p>
-                <p>ARTIST // <span id="right-art-artist"></span></p>
-                <p>CREATED // <span id="right-art-date"></span></p>
-             </div>
-
-            </div>
-
-
-        <section class="archive">
-           <details>
-            <summary>REGIONS</summary>
-            <p>Cascadia</p>
-            <p>Pelara</p>
-            <p>Meridian</p>
-            <p>Cordara</p>
-            <p>Valmere</p>
-            <p>Antilla</p>
-            <p>Occidia</p>
-           </details>
-
-
-           <details>
-            <summary>HISTORY</summary>
-            <p>The Twenty-Year War</p>
-            <p>The Joining</p>
-            <p>The Reconstruction</p>
-            <p>Formation of TREED</p>
-           </details>
-
-           <details>
-            <summary>TREED</summary>
-            <p>Government</p>
-            <p>Capitals</p>
-            <p>Sentinels</p>
-            <p>Vanguard Division</p>
-           </details>
-
-           <details>
-            <summary>FACTIONS</summary>
-            <p>The Butter Club</p>
-            <p>Saints Rebellion</p>
-           </details>
-
-           <details>
-            <summary>SUPERNATURAL RECORDS</summary>
-            <p>Demons'</p>
-            <p>Damned Demons'</p>
-            <p>Primogenitor's</p>
-            <p>Newmen's</p>
-            <p>Maledict's</p>
-            <p>Saint's</p>
-            <p>Angel's</p>
-            <p>Archangel's</p>
-            
-           </details>
-
-
-
-        </section>
-
-        <section class="record-display">
-           <p class="record-label">ARCHIVE RECORD</p>
-
-           <p id="record-type">RECORD TYPE // NONE</p>
-
-           <h2 id="record-title">NO RECORD SELECTED</h2>
-           <div class="record-metadata">
-            <p>STATUS // <span id="record-status">UNAVAILABLE</span></p>
-            <p>ACCESS // <span id="record-access">PUBLIC</span></p>
-           </div>
-
-           <p id="record-description">Select a record from the archive directory to view available information.</p>
-
-             <div id="record-extra">
-                
-             </div>
-
-           <button id="record-expand" disabled>SEE MORE ↓</button>
-
-        </section>
+        <button id="record-expand" disabled>SEE MORE ↓</button>
+      </section>
     </div>
 
     <footer class="site-footer">
-      <p>THIS WEBSITE IS STILL BEING UPDATED AS LORE IS CREATED</p>
-      <p>ARCHIVE VERSION // <span id="site-version">1.0.0</span></p>
-      <p>LAST UPDATED // <span id=last-updated>09.23.2026</span></p>
+      <p>FAN MADE ARCHIVE. CREDIT TO ORIGINAL CREATORS.</p>
+      <p>ARCHIVE VERSION // <span id="site-version">2.0.0</span></p>
+      <p>LAST UPDATED // <span id="last-updated">09.30.2026</span></p>
     </footer>
-</body>
-
+  </body>
 </html>
